@@ -9,7 +9,8 @@
 [![Dependency Status](https://www.versioneye.com/user/projects/57dc1925037c200040cdcee8/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57dc1925037c200040cdcee8)
 [![License](https://poser.pugx.org/gpslab/image-meta/license.png)](https://packagist.org/packages/gpslab/image-meta)
 
-# Library for get image meta data
+Library for get image meta data
+===============================
 
 ## Installation
 
