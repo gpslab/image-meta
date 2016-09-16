@@ -5,7 +5,6 @@
 
 namespace GpsLab\Component\ImageMeta\Tests;
 
-use GpsLab\Component\ImageMeta\DataMeta;
 use GpsLab\Component\ImageMeta\ParserMeta;
 
 class ParserMetaTest extends \PHPUnit_Framework_TestCase
@@ -52,7 +51,7 @@ class ParserMetaTest extends \PHPUnit_Framework_TestCase
 
         $data = $this->parser->getMeta($this->filename);
 
-        $this->assertInstanceOf(DataMeta::class, $data);
+        $this->assertInstanceOf('GpsLab\Component\ImageMeta\DataMeta', $data);
         $this->assertEquals(1, $data->getWidth());
         $this->assertEquals(5, $data->getHeight());
         $this->assertEquals('image/gif', $data->getMime());
