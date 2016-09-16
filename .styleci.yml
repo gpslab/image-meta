@@ -5,3 +5,5 @@ enabled:
 
 disabled:
   - phpdoc_align
+  - no_blank_lines_before_namespace
+  - simplified_null_return
