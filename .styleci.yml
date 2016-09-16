@@ -2,8 +2,8 @@ preset: symfony
 
 enabled:
   - short_array_syntax
+  - single_blank_line_before_namespace
 
 disabled:
   - phpdoc_align
-  - no_blank_lines_before_namespace
   - simplified_null_return
