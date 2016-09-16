@@ -3,6 +3,7 @@
     "license": "MIT",
     "type": "library",
     "homepage": "https://github.com/gpslab/image-meta",
+    "description": "Library for get image meta data",
     "autoload": {
         "psr-4": {
             "GpsLab\\Component\\ImageMeta\\": "src/"
