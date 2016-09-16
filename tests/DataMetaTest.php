@@ -2,7 +2,6 @@
 /**
  * @author Peter Gribanov <info@peter-gribanov.ru>
  */
-
 namespace GpsLab\Component\ImageMeta\Tests;
 
 use GpsLab\Component\ImageMeta\DataMeta;
