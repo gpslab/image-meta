@@ -6,7 +6,6 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gpslab/image-meta/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gpslab/image-meta/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/4cfdc9e9-6bdb-406a-8340-aec2e844d6a1/mini.png)](https://insight.sensiolabs.com/projects/4cfdc9e9-6bdb-406a-8340-aec2e844d6a1)
 [![StyleCI](https://styleci.io/repos/68383765/shield?branch=master)](https://styleci.io/repos/68383765)
-[![Dependency Status](https://www.versioneye.com/user/projects/57dc1925037c200040cdcee8/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57dc1925037c200040cdcee8)
 [![License](https://poser.pugx.org/gpslab/image-meta/license.png)](https://packagist.org/packages/gpslab/image-meta)
 
 Library for get image meta data
