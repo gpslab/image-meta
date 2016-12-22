@@ -40,7 +40,7 @@ class DataMeta
     /**
      * @return int
      */
-    public function getWidth()
+    public function width()
     {
         return $this->width;
     }
@@ -48,7 +48,7 @@ class DataMeta
     /**
      * @return int
      */
-    public function getHeight()
+    public function weight()
     {
         return $this->height;
     }
@@ -56,7 +56,7 @@ class DataMeta
     /**
      * @return string
      */
-    public function getMime()
+    public function mime()
     {
         return $this->mime;
     }
@@ -67,9 +67,9 @@ class DataMeta
     public function toArray()
     {
         return [
-            'width' => $this->getWidth(),
-            'height' => $this->getHeight(),
-            'mime' => $this->getMime(),
+            'width' => $this->width(),
+            'height' => $this->weight(),
+            'mime' => $this->mime(),
         ];
     }
 }

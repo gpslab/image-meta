@@ -26,12 +26,12 @@ composer require gpslab/image-meta
 $path = ''; // path to image
 $parser = new ParserMeta();
 
-$data = $parser->getMeta($path);
+$data = $parser->meta($path);
 
 // access from getters
-echo $data->getWidth();
-echo $data->getHeight();
-echo $data->getMime();
+echo $data->width();
+echo $data->height();
+echo $data->mime();
 
 // access as array
 $array = $data->toArray();

@@ -39,24 +39,24 @@ class ParserMetaTest extends \PHPUnit_Framework_TestCase
 
     public function testParseNoFile()
     {
-        $this->assertNull($this->parser->getMeta($this->filename));
+        $this->assertNull($this->parser->meta($this->filename));
     }
 
     public function testParseNotImage()
     {
         touch($this->filename);
-        $this->assertNull($this->parser->getMeta($this->filename));
+        $this->assertNull($this->parser->meta($this->filename));
     }
 
     public function testParse()
     {
         file_put_contents($this->filename, base64_decode(self::IMAGE));
 
-        $data = $this->parser->getMeta($this->filename);
+        $data = $this->parser->meta($this->filename);
 
         $this->assertInstanceOf('GpsLab\Component\ImageMeta\DataMeta', $data);
-        $this->assertEquals(1, $data->getWidth());
-        $this->assertEquals(5, $data->getHeight());
-        $this->assertEquals('image/gif', $data->getMime());
+        $this->assertEquals(1, $data->width());
+        $this->assertEquals(5, $data->weight());
+        $this->assertEquals('image/gif', $data->mime());
     }
 }

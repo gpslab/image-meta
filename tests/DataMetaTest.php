@@ -20,9 +20,9 @@ class DataMetaTest extends \PHPUnit_Framework_TestCase
 
         $data = new DataMeta($width, $height, $mime);
 
-        $this->assertEquals($width, $data->getWidth());
-        $this->assertEquals($height, $data->getHeight());
-        $this->assertEquals($mime, $data->getMime());
+        $this->assertEquals($width, $data->width());
+        $this->assertEquals($height, $data->weight());
+        $this->assertEquals($mime, $data->mime());
 
         $this->assertEquals([
             'width' => $width,

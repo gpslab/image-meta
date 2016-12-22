@@ -15,7 +15,7 @@ class ParserMeta
      *
      * @return DataMeta|null
      */
-    public function getMeta($filename)
+    public function meta($filename)
     {
         if (file_exists($filename) && ($info = @getimagesize($filename))) {
             return new DataMeta($info[0], $info[1], $info['mime']);
