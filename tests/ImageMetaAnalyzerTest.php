@@ -55,7 +55,7 @@ class ImageMetaAnalyzerTest extends \PHPUnit_Framework_TestCase
 
         $data = $this->analyzer->analyze($this->filename);
 
-        $this->assertInstanceOf('GpsLab\Component\ImageMeta\DataMeta', $data);
+        $this->assertInstanceOf('GpsLab\Component\ImageMeta\ImageMetadata', $data);
         $this->assertEquals(1, $data->width());
         $this->assertEquals(5, $data->height());
         $this->assertEquals('image/gif', $data->mime());

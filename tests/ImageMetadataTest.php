@@ -9,9 +9,9 @@
 
 namespace GpsLab\Component\ImageMeta\Tests;
 
-use GpsLab\Component\ImageMeta\DataMeta;
+use GpsLab\Component\ImageMeta\ImageMetadata;
 
-class DataMetaTest extends \PHPUnit_Framework_TestCase
+class ImageMetadataTest extends \PHPUnit_Framework_TestCase
 {
     public function testGetters()
     {
@@ -19,7 +19,7 @@ class DataMetaTest extends \PHPUnit_Framework_TestCase
         $height = 200;
         $mime = 'image/jpeg';
 
-        $data = new DataMeta($width, $height, $mime);
+        $data = new ImageMetadata($width, $height, $mime);
 
         $this->assertEquals($width, $data->width());
         $this->assertEquals($height, $data->height());

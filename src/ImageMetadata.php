@@ -9,7 +9,7 @@
 
 namespace GpsLab\Component\ImageMeta;
 
-class DataMeta
+class ImageMetadata
 {
     /**
      * @var int
@@ -27,8 +27,8 @@ class DataMeta
     private $mime = '';
 
     /**
-     * @param int $width
-     * @param int $height
+     * @param int    $width
+     * @param int    $height
      * @param string $mime
      */
     public function __construct($width, $height, $mime)
@@ -68,9 +68,9 @@ class DataMeta
     public function toArray()
     {
         return [
-            'width' => $this->width(),
-            'height' => $this->height(),
-            'mime' => $this->mime(),
+            'width' => $this->width,
+            'height' => $this->height,
+            'mime' => $this->mime,
         ];
     }
 }

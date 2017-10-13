@@ -14,12 +14,12 @@ class ImageMetaAnalyzer
     /**
      * @param string $filename
      *
-     * @return DataMeta|null
+     * @return ImageMetadata|null
      */
     public function analyze($filename)
     {
         if (file_exists($filename) && ($info = @getimagesize($filename))) {
-            return new DataMeta($info[0], $info[1], $info['mime']);
+            return new ImageMetadata($info[0], $info[1], $info['mime']);
         } else {
             return null;
         }
