@@ -38,22 +38,22 @@ class ImageMetaAnalyzerTest extends \PHPUnit_Framework_TestCase
         }
     }
 
-    public function testParseNoFile()
+    public function testNoFile()
     {
-        $this->assertNull($this->analyzer->meta($this->filename));
+        $this->assertNull($this->analyzer->analyze($this->filename));
     }
 
-    public function testParseNotImage()
+    public function testNotImage()
     {
         touch($this->filename);
-        $this->assertNull($this->analyzer->meta($this->filename));
+        $this->assertNull($this->analyzer->analyze($this->filename));
     }
 
-    public function testParse()
+    public function testAnalyze()
     {
         file_put_contents($this->filename, base64_decode(self::IMAGE));
 
-        $data = $this->analyzer->meta($this->filename);
+        $data = $this->analyzer->analyze($this->filename);
 
         $this->assertInstanceOf('GpsLab\Component\ImageMeta\DataMeta', $data);
         $this->assertEquals(1, $data->width());

@@ -24,7 +24,7 @@ composer require gpslab/image-meta
 $path = ''; // path to image
 $analyzer = new ImageMetaAnalyzer();
 
-$data = $analyzer->meta($path);
+$data = $analyzer->analyze($path);
 
 // access from getters
 echo $data->width();
