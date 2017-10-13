@@ -20,7 +20,7 @@ composer require gpslab/image-meta
 
 ## Usage
 
-```
+```php
 $path = ''; // path to image
 $analyzer = new ImageMetaAnalyzer();
 
