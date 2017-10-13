@@ -14,17 +14,17 @@ class DataMeta
     /**
      * @var int
      */
-    protected $width = 0;
+    private $width = 0;
 
     /**
      * @var int
      */
-    protected $height = 0;
+    private $height = 0;
 
     /**
      * @var string
      */
-    protected $mime = '';
+    private $mime = '';
 
     /**
      * @param int $width
@@ -49,7 +49,7 @@ class DataMeta
     /**
      * @return int
      */
-    public function weight()
+    public function height()
     {
         return $this->height;
     }
@@ -69,7 +69,7 @@ class DataMeta
     {
         return [
             'width' => $this->width(),
-            'height' => $this->weight(),
+            'height' => $this->height(),
             'mime' => $this->mime(),
         ];
     }

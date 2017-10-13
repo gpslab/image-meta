@@ -57,7 +57,7 @@ class ParserMetaTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf('GpsLab\Component\ImageMeta\DataMeta', $data);
         $this->assertEquals(1, $data->width());
-        $this->assertEquals(5, $data->weight());
+        $this->assertEquals(5, $data->height());
         $this->assertEquals('image/gif', $data->mime());
     }
 }
