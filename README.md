@@ -22,9 +22,9 @@ composer require gpslab/image-meta
 
 ```
 $path = ''; // path to image
-$parser = new ParserMeta();
+$analyzer = new ImageMetaAnalyzer();
 
-$data = $parser->meta($path);
+$data = $analyzer->meta($path);
 
 // access from getters
 echo $data->width();

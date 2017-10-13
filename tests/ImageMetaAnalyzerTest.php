@@ -9,25 +9,25 @@
 
 namespace GpsLab\Component\ImageMeta\Tests;
 
-use GpsLab\Component\ImageMeta\ParserMeta;
+use GpsLab\Component\ImageMeta\ImageMetaAnalyzer;
 
-class ParserMetaTest extends \PHPUnit_Framework_TestCase
+class ImageMetaAnalyzerTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var ParserMeta
+     * @var ImageMetaAnalyzer
      */
-    protected $parser;
+    private $analyzer;
 
     /**
      * @var string
      */
-    protected $filename;
+    private $filename;
 
     const IMAGE = 'R0lGODlhAQAFAKIAAPX19e/v7/39/fr6+urq6gAAAAAAAAAAACH5BAAAAAAALAAAAAABAAUAAAMESAEjCQA7';
 
     protected function setUp()
     {
-        $this->parser = new ParserMeta();
+        $this->analyzer = new ImageMetaAnalyzer();
         $this->filename = tempnam(sys_get_temp_dir(), 'test');
     }
 
@@ -40,20 +40,20 @@ class ParserMetaTest extends \PHPUnit_Framework_TestCase
 
     public function testParseNoFile()
     {
-        $this->assertNull($this->parser->meta($this->filename));
+        $this->assertNull($this->analyzer->meta($this->filename));
     }
 
     public function testParseNotImage()
     {
         touch($this->filename);
-        $this->assertNull($this->parser->meta($this->filename));
+        $this->assertNull($this->analyzer->meta($this->filename));
     }
 
     public function testParse()
     {
         file_put_contents($this->filename, base64_decode(self::IMAGE));
 
-        $data = $this->parser->meta($this->filename);
+        $data = $this->analyzer->meta($this->filename);
 
         $this->assertInstanceOf('GpsLab\Component\ImageMeta\DataMeta', $data);
         $this->assertEquals(1, $data->width());

@@ -9,7 +9,7 @@
 
 namespace GpsLab\Component\ImageMeta;
 
-class ParserMeta
+class ImageMetaAnalyzer
 {
     /**
      * @param string $filename
