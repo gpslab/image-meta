@@ -10,8 +10,9 @@
 namespace GpsLab\Component\ImageMeta\Tests;
 
 use GpsLab\Component\ImageMeta\ImageMetadata;
+use PHPUnit\Framework\TestCase;
 
-class ImageMetadataTest extends \PHPUnit_Framework_TestCase
+class ImageMetadataTest extends TestCase
 {
     public function testGetters()
     {

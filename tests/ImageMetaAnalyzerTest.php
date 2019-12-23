@@ -10,8 +10,9 @@
 namespace GpsLab\Component\ImageMeta\Tests;
 
 use GpsLab\Component\ImageMeta\ImageMetaAnalyzer;
+use PHPUnit\Framework\TestCase;
 
-class ImageMetaAnalyzerTest extends \PHPUnit_Framework_TestCase
+class ImageMetaAnalyzerTest extends TestCase
 {
     /**
      * @var ImageMetaAnalyzer
