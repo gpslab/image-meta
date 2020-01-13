@@ -61,4 +61,28 @@ class ImageMetaAnalyzerTest extends TestCase
         $this->assertEquals(5, $data->height());
         $this->assertEquals('image/gif', $data->mime());
     }
+
+    public function imageFileProvider()
+    {
+        $imagePath = __DIR__.'/images/test';
+
+        return [
+            [$imagePath.'.gif', 69, 24, 'image/gif'],
+            [$imagePath.'.jpg', 69, 24, 'image/jpeg'],
+            [$imagePath.'.png', 69, 24, 'image/png'],
+            [$imagePath.'.tif', 69, 24, 'image/tiff'],
+        ];
+    }
+
+    /**
+     * @dataProvider imageFileProvider
+     */
+    public function testAnalyzeOnImageFiles($imagePath, $expectedWidth, $expectedHeight, $expectedMime)
+    {
+        $data = $this->analyzer->analyze($imagePath);
+
+        $this->assertEquals($expectedWidth, $data->width());
+        $this->assertEquals($expectedHeight, $data->height());
+        $this->assertEquals($expectedMime, $data->mime());
+    }
 }
